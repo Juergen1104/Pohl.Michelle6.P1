@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist name="Test Playlist">
+    <song>
+        <title>Apologize</title>
+        <artist>Timbaland, OneRepublic</artist>
+        <year>2007</year>
+        <streams>90000000</streams>
+    </song>
+    <song>
+        <title>Beat It</title>
+        <artist>Michael Jackson</artist>
+        <year>1982</year>
+        <streams>120000000</streams>
+    </song>
+    <song>
+        <title>Bye Bye</title>
+        <artist>Cro</artist>
+        <year>2021</year>
+        <streams>37000000</streams>
+    </song>
+    <song>
+        <title>I Am</title>
+        <artist>Jorja Smith</artist>
+        <year>2018</year>
+        <streams>52000000</streams>
+    </song>
+    <song>
+        <title>Massive</title>
+        <artist>Drake</artist>
+        <year>2022</year>
+        <streams>75000000</streams>
+    </song>
+    <song>
+        <title>Mittelmeer</title>
+        <artist>Pashanim</artist>
+        <year>2021</year>
+        <streams>29000000</streams>
+    </song>
+    <song>
+        <title>Mystery Lady</title>
+        <artist>Masego, Don Toliver</artist>
+        <year>2020</year>
+        <streams>45000000</streams>
+    </song>
+    <song>
+        <title>This Love</title>
+        <artist>Maroon 5</artist>
+        <year>2002</year>
+        <streams>68000000</streams>
+    </song>
+    <song>
+        <title>Villa auf der Klippe</title>
+        <artist>Max Herre, Trettmann</artist>
+        <year>2019</year>
+        <streams>42000000</streams>
+    </song>
+</playlist>

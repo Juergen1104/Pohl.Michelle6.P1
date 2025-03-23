@@ -1,0 +1,12 @@
+<!-- DTD für Playlists -->
+<!ELEMENT playlist (song+)>
+<!ATTLIST playlist
+    name CDATA #REQUIRED
+>
+
+<!ELEMENT song (title, artist, year, streams)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT artist (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT streams (#PCDATA)>
