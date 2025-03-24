@@ -26,6 +26,7 @@ public class Song {
 
     /**
      * Gibt den Titel des Songs zurück.
+     *
      * @return Titel des Songs
      */
     public String getTitle() {
@@ -34,6 +35,7 @@ public class Song {
 
     /**
      * Setzt den Titel des Songs.
+     *
      * @param title Titel des Songs
      */
     public void setTitle(String title) {
@@ -42,6 +44,7 @@ public class Song {
 
     /**
      * Gibt den Künstler des Songs zurück.
+     *
      * @return Künstler des Songs
      */
     public String getArtist() {
@@ -50,6 +53,7 @@ public class Song {
 
     /**
      * Setzt den Künstler des Songs.
+     *
      * @param artist Künstler des Songs
      */
     public void setArtist(String artist) {
@@ -58,6 +62,7 @@ public class Song {
 
     /**
      * Gibt das Veröffentlichungsjahr des Songs zurück.
+     *
      * @return Veröffentlichungsjahr des Songs
      */
     public int getYear() {
@@ -66,6 +71,7 @@ public class Song {
 
     /**
      * Setzt das Veröffentlichungsjahr des Songs.
+     *
      * @param year Veröffentlichungsjahr des Songs
      */
     public void setYear(int year) {
@@ -74,6 +80,7 @@ public class Song {
 
     /**
      * Gibt die Anzahl der Streams des Songs zurück.
+     *
      * @return Anzahl der Streams
      */
     public long getStreams() {
@@ -82,6 +89,7 @@ public class Song {
 
     /**
      * Setzt die Anzahl der Streams des Songs.
+     *
      * @param streams Anzahl der Streams
      */
     public void setStreams(long streams) {
@@ -90,6 +98,7 @@ public class Song {
 
     /**
      * Überschreibt die Standardausgabe für eine lesbare Darstellung des Songs.
+     *
      * @return String-Darstellung des Songs
      */
     @Override
