@@ -29,11 +29,8 @@ public class PlaylistContentHandler implements ContentHandler {
 	private String currentElement; // Name des aktuellen XML-Elements
 
     public PlaylistContentHandler(int year) {
-
 		this.selYear = year;
 		this.songs = new ArrayList<>();
-		//this.charSequence = new String();
-
     }
 
     @Override
@@ -67,7 +64,6 @@ public class PlaylistContentHandler implements ContentHandler {
 				}
 				break;
 		}
-
     }
 
     public List<Song> getResult() {

@@ -49,10 +49,7 @@ public class DataFilter {
             }
         }
         return filteredSongs;
-
     }
-
-
 
     /* ***   Aufgabenteil (2d) *** */
 
@@ -102,7 +99,6 @@ public class DataFilter {
             int artistComparison = artistComparator.compare(s1, s2);
             return (artistComparison != 0) ? artistComparison : streamsComparator.compare(s2, s1);
         });
-
         return sortedSongs;
     }
 
@@ -118,7 +114,6 @@ public class DataFilter {
                 .count();
         return a + " -> " + (b - 1) + ": " + count + " songs";
     }
-
 
     /* ***   Aufgabenteil (2g) *** */
 
@@ -195,6 +190,4 @@ public class DataFilter {
             }
         }
     }
-
-
 }

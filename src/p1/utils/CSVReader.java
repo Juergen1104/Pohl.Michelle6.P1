@@ -1,7 +1,6 @@
 package p1.utils;
 
 import p1.model.Song;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSVReader {
-
-
 
     /* ***   Aufgabenteil (1a) *** */
 
@@ -42,9 +39,6 @@ public class CSVReader {
         return songs;
     }
 
-
-
-
     /* ***   Aufgabenteil (1b) *** */
 
     /**
@@ -54,7 +48,6 @@ public class CSVReader {
      * @return Ein Song-Objekt oder null, falls die Zeile ungültig ist
      */
     private Song parseLine(String line) {
-
         try {
             String[] parts = line.split(";");
             if (parts.length < 9) { // Mindestanzahl an Spalten prüfen
@@ -72,7 +65,6 @@ public class CSVReader {
             return null;
         }
     }
-
 }
     
     

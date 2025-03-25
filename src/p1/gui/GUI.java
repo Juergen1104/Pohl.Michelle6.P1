@@ -29,7 +29,6 @@ public class GUI {
 	private CardLayout cardLayout;
 	private DataFilter filterData;
 	private Set<Integer> selectedSongIndices = new HashSet<>();
-
 	   
 	    public GUI() {
 	        List<Song> songs = null;
