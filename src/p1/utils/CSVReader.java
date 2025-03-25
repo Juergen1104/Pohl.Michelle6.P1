@@ -64,7 +64,7 @@ public class CSVReader {
             String title = parts[0].trim();
             String artist = parts[1].trim();
             int year = Integer.parseInt(parts[3].trim());
-            int streams = Integer.parseInt(parts[8].trim());
+            long streams = Long.parseLong(parts[8].trim());
 
             return new Song(title, artist, year, streams);
         } catch (NumberFormatException e) {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist name="My Own Playlist">
+  <song>
+    <title>Cruel Summer</title>
+    <artist>Taylor Swift</artist>
+    <year>2019</year>
+    <streams>800840817</streams>
+  </song>
+  <song>
+    <title>WHERE SHE GOES</title>
+    <artist>Bad Bunny</artist>
+    <year>2023</year>
+    <streams>303236322</streams>
+  </song>
+  <song>
+    <title>Flowers</title>
+    <artist>Miley Cyrus</artist>
+    <year>2023</year>
+    <streams>1316855716</streams>
+  </song>
+</playlist>

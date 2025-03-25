@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist name="My Own Playlist">
+  <song>
+    <title>La Bebe - Remix</title>
+    <artist>Peso Pluma, Yng Lvcas</artist>
+    <year>2023</year>
+    <streams>553634067</streams>
+  </song>
+  <song>
+    <title>Flowers</title>
+    <artist>Miley Cyrus</artist>
+    <year>2023</year>
+    <streams>1316855716</streams>
+  </song>
+</playlist>

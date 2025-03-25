@@ -65,14 +65,14 @@ public class DataFilter {
     /* ***   Aufgabenteil (2e) *** */
     public String getMostStreamedArtist() {
 
-        Map<String, Integer> artistStreamsMap = new HashMap<>();
+        Map<String, Long> artistStreamsMap = new HashMap<>();
 
         for (Song song : songs) {
-            artistStreamsMap.put(song.getArtist(), (int) (artistStreamsMap.getOrDefault(song.getArtist(), 0) + song.getStreams()));
+            artistStreamsMap.put(song.getArtist(),  (artistStreamsMap.getOrDefault((Object) song.getArtist(), (long) 0) + song.getStreams()));
         }
 
-        Map.Entry<String, Integer> topArtist = null;
-        for (Map.Entry<String, Integer> entry : artistStreamsMap.entrySet()) {
+        Map.Entry<String, Long> topArtist = null;
+        for (Map.Entry<String, Long> entry : artistStreamsMap.entrySet()) {
             if (topArtist == null || entry.getValue() > topArtist.getValue()) {
                 topArtist = entry;
             }
@@ -83,9 +83,6 @@ public class DataFilter {
         }
         return "No artist found";
     }
-
-
-
 
     /**
      * Sortiert die Songs alphabetisch nach dem Namen des Künstlers.
@@ -109,9 +106,6 @@ public class DataFilter {
         return sortedSongs;
     }
 
-
-
-
     /**
      * Filtert alle Songs aus einem Stream mit den Songs, welche ab dem
      * Jahr a und vor dem Jahr b erschienen sind. Die werden gezählt und
@@ -123,7 +117,6 @@ public class DataFilter {
                 .filter(song -> song.getYear() >= a && song.getYear() < b)
                 .count();
         return a + " -> " + (b - 1) + ": " + count + " songs";
-
     }
 
 
@@ -167,8 +160,6 @@ public class DataFilter {
 
         sBuf.append("\nTop Artists:\n").append(topNSongArtists(n));
 
-
-
         sBuf.append("\nArtists of top " + n + " streamed songs: \n\n");
 
         return sBuf.toString();
@@ -179,6 +170,12 @@ public class DataFilter {
 
         public SongComparator(String criteria) {
             this.criteria = criteria.toLowerCase();
+        }
+
+        public static List<Song> getTopNSongs(List<Song> songs, int n) {
+            songs.sort(new SongComparator("streams")); // Sortierung nach Streams
+            n = Math.min(n, songs.size()); // Begrenzung auf maximale Listengröße
+            return new ArrayList<>(songs.subList(0, n)); // Top-n Songs zurückgeben
         }
 
         @Override
@@ -192,17 +189,11 @@ public class DataFilter {
                     return Integer.compare(s1.getYear(), s2.getYear());
                 case "streams":
                     return Double.compare(s2.getStreams(), s1.getStreams()); // Absteigende Reihenfolge
-                    //return Integer.compare((int) s2.getStreams(), (int) s1.getStreams()); // Absteigende Reihenfolge
+                //return Integer.compare((int) s2.getStreams(), (int) s1.getStreams()); // Absteigende Reihenfolge
                 default:
                     throw new IllegalArgumentException("Ungültiges Sortierkriterium: " + criteria);
             }
         }
-
-//        public static List<Song> getTopNSongs(List<Song> songs, int n) {
-//            songs.sort(new SongComparator("streams")); // Sortierung nach Streams
-//            n = Math.min(n, songs.size()); // Begrenzung auf maximale Listengröße
-//            return new ArrayList<>(songs.subList(0, n)); // Top-n Songs zurückgeben
-//        }
     }
 
 
