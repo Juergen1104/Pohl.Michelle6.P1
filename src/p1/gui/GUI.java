@@ -1,14 +1,15 @@
 package p1.gui;
 
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.table.DefaultTableModel;
-
 import p1.model.Song;
 import p1.utils.CSVReader;
 import p1.utils.DataFilter;
-import p1.xml.*;
+import p1.xml.XMLReader;
+import p1.xml.XMLWriter;
+import p1.xml.XML_PushParser;
 
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +35,7 @@ public class GUI {
 	        List<Song> songs = null;
 	        try {
 	            CSVReader reader = new CSVReader();
-	            songs = reader.parseFile("D:/Users/jpohl/IdeaProjects/Java_Semester_6/Pohl.Michelle.P1/data/spotify_songs.csv");
+				songs = reader.parseFile("data/spotify_songs.csv");
 	        } catch (IOException e) {
 	            JOptionPane.showMessageDialog(null, "Error while reading from CSV file: " + e.getMessage(),
 	                    "File Error", JOptionPane.ERROR_MESSAGE);
@@ -482,7 +483,7 @@ public class GUI {
 	    private void loadSongsIntoTableModel(DefaultTableModel tableModel) {
 	        try {
 	            CSVReader reader = new CSVReader();
-	            List<Song> songs = reader.parseFile("D:/Users/jpohl/IdeaProjects/Java_Semester_6/Pohl.Michelle.P1/data/spotify_songs.csv");
+				List<Song> songs = reader.parseFile("data/spotify_songs.csv");
 	            for (Song song : songs) {
 	                tableModel.addRow(new Object[]{
 	                        song.getTitle(),
